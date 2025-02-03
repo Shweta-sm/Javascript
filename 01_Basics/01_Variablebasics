@@ -1,0 +1,12 @@
+const accountId=1233;
+let accountEmail="Shweta@gmail.com";
+var accountPassword="5677";
+accountCity="Mumbai";
+let accountState; //if variable is declared but value is not assigned then its value will be undefined
+/*
+prefer not use the var bcoz the issues with the funcational and
+block scope
+*/
+accountEmail="sm@gmail.com"
+console.log(accountEmail);
+console.table([accountId,accountEmail,accountPassword,accountCity,accountState]);

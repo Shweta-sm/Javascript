@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Part4 </title>
+</head>
+<body style="background-color: #212121 ;color:#fff">
+    <!--Edit and remove elements-->
+    <ul class="language">
+         <li>Javascript</li>
+    </ul>
+</body>
+
+<script>
+//basic way ..in this code traverse a alot .code not optimized
+function addLang(langName){
+ const li=document.createElement('li');
+ li.innerHTML=`${langName}`
+ document.querySelector('.language').appendChild(li)
+
+}
+addLang("python")
+addLang("Php")
+
+//optimized way
+
+function addOptiLang(langName){
+ 
+    const li=document.createElement('li');
+    li.appendChild(document.createTextNode(langName));
+    document.querySelector('.language').appendChild(li)
+}
+addOptiLang("java")
+
+//edit
+
+const secondlang=document.querySelector('li:nth-child(2)')
+//secondlang.innerHTML="mojo"
+//another way
+const newli=document.createElement('li')
+newli.textContent="Spring Boot"
+secondlang.replaceWith(newli)
+
+//edit
+const firstLang=document.querySelector('li:first-child')
+firstLang.outerHTML="<li>TypeScript</li>"
+
+//remove
+const lastLang=document.querySelector('li:last-child')
+lastLang.remove()
+
+
+</script>
+</html>

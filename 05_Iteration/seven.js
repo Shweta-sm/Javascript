@@ -37,3 +37,5 @@ const ShoppingCart=[
 const PricetoPay=ShoppingCart.reduce((acc,item)=> acc+item.price,0)
 
 console.log(PricetoPay);
+
+//2.30.33

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event js</title>
+</head>
+<body>
+
+    <h1>JavaScript Events</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    
+</body>
+
+<script>
+let intervalId;
+let isRunning=false;
+
+
+    document.querySelector('#start').addEventListener('click',function(){
+       if(!isRunning){
+        isRunning=true;
+       
+        const sayDate=function(str){
+            if(isRunning){
+             console.log(str,Date.now());
+    }}
+
+  intervalId=setInterval(sayDate,1000,"Hii")
+       }
+    })
+
+
+
+
+document.querySelector('#stop').addEventListener('click',function(){
+    clearInterval(intervalId);
+    isRunning=false;
+    console.log("Stopped");
+    
+})
+
+</script>
+
+</html>
